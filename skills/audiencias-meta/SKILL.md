@@ -1,62 +1,14 @@
-# Audiencias Meta — Gestión avanzada de audiencias
+---
+name: "audiencias-meta"
+description: "Planifica segmentación, exclusiones, retargeting y audiencias similares en Meta Ads cuando el usuario pide definir o gestionar audiencias."
+---
 
-## Descripción
-Crea y gestiona audiencias personalizadas y similares en Meta Ads
-para maximizar la relevancia y reducir el costo por resultado.
+# Audiencias de Meta
 
-## Cuándo usar (triggers)
-- "crea una audiencia", "audiencia personalizada"
-- "lookalike", "audiencia similar"
-- "excluir clientes actuales", "retargeting"
-- "a quién le mostramos el ad"
+Identifica cuenta, objetivo, ubicación, oferta, fuentes de datos y exclusiones. Lee la configuración real antes de cambiarla. Verifica en las herramientas disponibles qué tipos de audiencia y parámetros admite la cuenta; no inventes esquemas ni tamaños.
 
-## Tipos de audiencias
+Propón segmentos con criterio de inclusión, exclusión, período y razón comercial. Distingue hipótesis de datos observados y estima solapamiento solo con evidencia.
 
-### Custom Audience (audiencia personalizada)
-Basada en datos propios:
-```
-mcp__c24bc423__ads_create_custom_audience({
-  adAccountId: "act_<id>",
-  name: "Clientes activos — Mayo 2026",
-  description: "Lista de clientes que compraron en los últimos 90 días",
-  subtype: "CUSTOM"
-})
-```
+No descargues ni subas listas de personas sin que esa operación forme parte del pedido y exista autorización de uso de esos datos. Mantén datos identificables fuera del repositorio y de reportes públicos. Crear una audiencia no implica activar anuncios.
 
-### Tipos de subtype más usados
-| Subtype | Fuente de datos |
-|---|---|
-| `CUSTOM` | Lista de emails/teléfonos |
-| `WEBSITE` | Pixel de Facebook (visitantes web) |
-| `ENGAGEMENT` | Personas que interactuaron con tu página/perfil |
-| `APP` | Usuarios de tu app |
-
-### Ver audiencias existentes
-```
-mcp__c24bc423__ads_get_ad_account_custom_audiences({
-  adAccountId: "act_<id>"
-})
-```
-
-### Actualizar una audiencia (agregar/quitar usuarios)
-```
-mcp__c24bc423__ads_update_custom_audience_users({
-  audienceId: "<id>",
-  action: "ADD",   // "ADD" | "REMOVE"
-  users: [{ email: "cliente@ejemplo.com" }]
-})
-```
-
-## Estrategia de audiencias recomendada
-```
-Cold (tráfico frío)     → Intereses + Lookalike 2-5%
-Warm (consideración)    → Visitantes web + Engagement
-Hot (retargeting)       → Carritos abandonados + Visitantes de producto
-Exclusión               → Clientes actuales (para campañas de adquisición)
-```
-
-## Buenas prácticas
-- Siempre excluir clientes actuales de campañas de adquisición
-- Lookalike: empezar con 1-2%, escalar a 3-5% si el volumen es bajo
-- Actualizar listas de clientes cada 30 días
-- Crear audiencias de exclusión de compradores recientes (30 días)
+Entrega una tabla de segmentos y, si ejecutaste cambios autorizados, sus identificadores y estado verificado.
