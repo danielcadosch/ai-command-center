@@ -1,4 +1,4 @@
-# AI ecosystem · Codex y Claude Code
+# AI Command Center
 
 Espacio de trabajo de Daniel para marketing, automatización y desarrollo asistidos por IA. Las instrucciones y skills viajan con el repositorio y se mantienen desde una sola fuente.
 
