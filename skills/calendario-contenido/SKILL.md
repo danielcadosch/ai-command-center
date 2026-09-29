@@ -1,66 +1,12 @@
-# Calendario de Contenido — Planificación editorial
+---
+name: "calendario-contenido"
+description: "Planifica calendarios editoriales y contenidos por canal; úsala para organizar publicaciones semanales o mensuales y sus entregables."
+---
 
-## Descripción
-Planifica y gestiona el calendario editorial usando Google Calendar para las fechas
-y Google Drive para almacenar el plan y los contenidos.
+# Calendario editorial
 
-## Cuándo usar (triggers)
-- "planifica el contenido del mes", "calendario editorial"
-- "qué publicar esta semana", "organiza las publicaciones"
-- "agenda los posts", "plan de contenido"
+Define período, zona horaria, objetivo, audiencia, canales y capacidad de producción usando el contexto. Distribuye pilares de contenido y formatos con un ritmo sostenible; no prometas resultados por publicar a una hora universal.
 
-## Proceso estándar
+Entrega fecha, canal, objetivo, tema, formato, CTA, activo necesario, responsable y estado. Incluye dependencias, reutilización y métricas de evaluación.
 
-### 1. Definir el mes y objetivos
-Preguntar a Daniel:
-- ¿Qué mes/período planificar?
-- ¿Objetivo principal? (awareness, conversión, engagement)
-- ¿Productos/servicios a destacar?
-- ¿Fechas especiales o lanzamientos?
-
-### 2. Crear estructura del calendario
-Distribución recomendada por semana:
-```
-Lunes:    Contenido educativo / valor
-Miércoles: Caso de éxito / testimonio
-Viernes:  Contenido de producto / oferta
-```
-
-### 3. Guardar el plan en Drive
-```
-mcp__6ca765ee__create_file({
-  name: "Calendario-Contenido-[MES]-[AÑO].md",
-  content: "[tabla del calendario]",
-  mimeType: "text/plain"
-})
-```
-
-### 4. Crear eventos en Calendar
-Uno por publicación con:
-- Título: plataforma + tipo de contenido
-- Descripción: tema, copy, link al asset
-```
-mcp__68c285f0__create_event({
-  calendarId: "primary",
-  summary: "[IG] Post educativo — [tema]",
-  start: { date: "2026-06-02" },
-  end:   { date: "2026-06-02" },
-  description: "Copy: [texto] | Asset: [link Drive]"
-})
-```
-
-## Template de calendario mensual
-```
-| Fecha | Plataforma | Tipo | Tema | Copy | Estado |
-|---|---|---|---|---|---|
-| 02/06 | Instagram | Educativo | [tema] | [copy] | Pendiente |
-| 04/06 | Facebook | Producto | [tema] | [copy] | Pendiente |
-```
-
-## Tipos de contenido por plataforma
-| Plataforma | Mejor contenido |
-|---|---|
-| Instagram Feed | Visual, inspiracional, producto |
-| Instagram Stories | Encuestas, detrás de escena, urgencia |
-| Facebook | Artículos, videos largos, eventos |
-| Email | Nurturing, ofertas, novedades |
+La tabla es un plan. Crear eventos en Calendar, invitar personas, programar publicaciones o enviarlas requiere que esa operación esté incluida en el alcance autorizado. Antes de crear eventos, busca duplicados y confirma calendario/zona horaria; no asumas que Drive o Calendar están conectados.
