@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-29",
+  "baseline_commit": "166f8076495aac1e00046f3e70850d6262ac2a01",
+  "notice": "Guías locales revisadas; no son copias certificadas ni paquetes oficiales completos. La referencia histórica no acredita una versión upstream fijada ni concede licencia sobre material de terceros.",
+  "skills": {
+    "ab-testing-ads": {
+      "path": "skills/ab-testing-ads/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "agentation": {
+      "path": "skills/agentation/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/benjitaylor/agentation",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "audiencias-meta": {
+      "path": "skills/audiencias-meta/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "brief-creativo": {
+      "path": "skills/brief-creativo/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "calendario-contenido": {
+      "path": "skills/calendario-contenido/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "copy-marketing": {
+      "path": "skills/copy-marketing/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "dispatching-parallel-agents": {
+      "path": "skills/dispatching-parallel-agents/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/obra/superpowers",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "email-marketing": {
+      "path": "skills/email-marketing/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "find-skills": {
+      "path": "skills/find-skills/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/vercel-labs/skills",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "github": {
+      "path": "skills/github/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "gmail": {
+      "path": "skills/gmail/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "google-calendar": {
+      "path": "skills/google-calendar/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "google-drive": {
+      "path": "skills/google-drive/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "mcp-builder": {
+      "path": "skills/mcp-builder/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/anthropics/skills",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "meta-ads": {
+      "path": "skills/meta-ads/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "n8n": {
+      "path": "skills/n8n/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "notebooklm": {
+      "path": "skills/notebooklm/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "reportes-marketing": {
+      "path": "skills/reportes-marketing/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": null,
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "skill-creator": {
+      "path": "skills/skill-creator/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/anthropics/skills",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "skill-judge": {
+      "path": "skills/skill-judge/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/softaworks/agent-toolkit",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "subagent-driven-development": {
+      "path": "skills/subagent-driven-development/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/obra/superpowers",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "verification-before-completion": {
+      "path": "skills/verification-before-completion/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/obra/superpowers",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "writing-plans": {
+      "path": "skills/writing-plans/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/obra/superpowers",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    },
+    "x-twitter-growth": {
+      "path": "skills/x-twitter-growth/SKILL.md",
+      "kind": "local-guide",
+      "historical_source": "https://github.com/alirezarezvani/claude-skills (MIT License)",
+      "upstream_revision": null,
+      "distribution": "local rewrite; upstream assets not bundled"
+    }
+  }
+}

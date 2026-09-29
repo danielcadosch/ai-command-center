@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "profile": "core",
+  "files": {
+    ".agents/skills/brief-creativo/SKILL.md": "f0705c166c9399baa08e8087a8a1206240f7dcd0b8cbea4a7fdb09f72c193fbb",
+    ".agents/skills/copy-marketing/SKILL.md": "babf7b910b25edc39d09ae773f73e8d7038e18a2519b7e480f1029b79ef63061",
+    ".agents/skills/reportes-marketing/SKILL.md": "6fa5f1b60aebbfadb9067818defc7b480abdd5cd100095c60eb9b223c469799a",
+    ".claude/skills/brief-creativo/SKILL.md": "f0705c166c9399baa08e8087a8a1206240f7dcd0b8cbea4a7fdb09f72c193fbb",
+    ".claude/skills/copy-marketing/SKILL.md": "babf7b910b25edc39d09ae773f73e8d7038e18a2519b7e480f1029b79ef63061",
+    ".claude/skills/reportes-marketing/SKILL.md": "6fa5f1b60aebbfadb9067818defc7b480abdd5cd100095c60eb9b223c469799a"
+  }
+}
