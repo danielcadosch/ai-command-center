@@ -1,58 +1,14 @@
 ---
-name: agentation
-description: Add Agentation visual feedback toolbar to a Next.js project. Use when setting up Agentation annotation syncing with AI agents in a Next.js app.
-source: https://github.com/benjitaylor/agentation
+name: "agentation"
+description: "Configura feedback visual con Agentation en una aplicación cuando el usuario pide integrar esa herramienta; requiere un proyecto compatible."
 ---
 
-# Agentation Setup
+# Adaptador local de Agentation
 
-Set up the Agentation annotation toolbar in this project.
+Inspecciona framework, gestor de paquetes, lockfile y configuración existente. Consulta la documentación oficial de Agentation para la versión instalada antes de elegir componentes o APIs.
 
-## Steps
+Integra la función únicamente en el entorno solicitado, normalmente desarrollo. No añadas una dependencia si el pedido solo es explicar o auditar. Conserva el gestor de paquetes del proyecto.
 
-1. **Check if already installed**
-   - Look for `agentation` in package.json dependencies
-   - If not found, run `npm install agentation` (or pnpm/yarn based on lockfile)
+Verifica compilación y recorrido real de anotación cuando exista navegador. Evita enviar capturas o datos de usuarios a servicios no autorizados. Informa pruebas y limitaciones.
 
-2. **Check if already configured**
-   - Search for `<Agentation` or `import { Agentation }` in src/ or app/
-   - If found, report that Agentation is already set up and exit
-
-3. **Detect framework**
-   - Next.js App Router: has `app/layout.tsx` or `app/layout.js`
-   - Next.js Pages Router: has `pages/_app.tsx` or `pages/_app.js`
-
-4. **Add the component**
-
-   For Next.js App Router, add to the root layout:
-   ```tsx
-   import { Agentation } from "agentation";
-
-   // Add inside the body, after children:
-   {process.env.NODE_ENV === "development" && <Agentation />}
-   ```
-
-   For Next.js Pages Router, add to _app:
-   ```tsx
-   import { Agentation } from "agentation";
-
-   // Add after Component:
-   {process.env.NODE_ENV === "development" && <Agentation />}
-   ```
-
-5. **Confirm component setup**
-   - Tell the user the Agentation toolbar component is configured
-
-6. **Recommend MCP server setup**
-   - For real-time annotation syncing with AI agents, set up the MCP server:
-     - **Universal** (Claude Code, Cursor, Codex, Windsurf, etc.):
-       Run `npx add-mcp` → follow prompts to add `agentation-mcp`
-     - **Claude Code only**: Run `agentation-mcp init`
-   - Restart coding agent after MCP setup
-
-## Notes
-- `NODE_ENV` check ensures Agentation only loads in development
-- Requires React 18
-- MCP server runs on port 4747 by default
-- MCP tools: `agentation_get_all_pending`, `agentation_resolve`, `agentation_watch_annotations`
-- Run `agentation-mcp doctor` to verify setup
+Este archivo es un adaptador local, no la distribución oficial completa. Referencia: https://github.com/benjitaylor/agentation

@@ -1,48 +1,14 @@
-# Google Drive — Archivos y documentos
+---
+name: "google-drive"
+description: "Busca, lee y organiza archivos o crea documentos en Google Drive cuando el usuario solicita trabajar con su unidad conectada."
+---
 
-## Cuándo usar
-- "busca en Drive", "encontrá el archivo", "abrí el doc"
-- "leé el contenido de", "qué dice el documento"
-- "crea un archivo en Drive"
+# Google Drive
 
-## Tools disponibles
+Usa la capacidad nativa de Drive/Docs/Sheets disponible antes que una receta genérica. Busca por nombre, tipo, carpeta o contexto; desambigua archivos homónimos antes de editar.
 
-### Buscar archivos
-```
-mcp__6ca765ee__search_files({
-  query: "nombre del archivo o palabras clave",
-  mimeType: "application/vnd.google-apps.document"  // opcional: filtrar por tipo
-})
-```
-Tipos útiles: `application/vnd.google-apps.document` (Docs), `application/vnd.google-apps.spreadsheet` (Sheets), `application/pdf`
+Lee contenido suficiente para el objetivo y conserva citas o vínculos a las fuentes. Selecciona la operación correcta para el tipo de archivo; no supongas que una API de texto puede editar cualquier documento.
 
-### Leer contenido de un archivo
-```
-mcp__6ca765ee__read_file_content({ fileId: "<id>" })
-```
+Para crear o actualizar, identifica destino y formato. Conserva contenido ajeno y evita duplicados. No cambies permisos de compartición ni muevas carpetas amplias sin que el pedido lo incluya.
 
-### Ver archivos recientes
-```
-mcp__6ca765ee__list_recent_files({ maxResults: 10 })
-```
-
-### Crear archivo
-```
-mcp__6ca765ee__create_file({
-  name: "nombre-archivo.txt",
-  content: "contenido",
-  mimeType: "text/plain",
-  parentId: "<id-carpeta>"  // opcional
-})
-```
-
-### Ver metadatos y permisos
-```
-mcp__6ca765ee__get_file_metadata({ fileId: "<id>" })
-mcp__6ca765ee__get_file_permissions({ fileId: "<id>" })
-```
-
-## Buenas prácticas
-- Buscar antes de crear para evitar duplicados
-- `read_file_content` devuelve el texto plano — para Docs/Sheets complejos puede ser truncado
-- Siempre confirmar con Daniel antes de modificar o mover archivos importantes
+Confirma el archivo y su enlace mediante la respuesta real. Si la integración falta, genera el contenido portable y declara que no fue guardado en Drive.

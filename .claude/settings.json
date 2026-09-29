@@ -2,23 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(git status)",
-      "Bash(git log *)",
-      "Bash(git diff *)",
-      "Bash(git branch *)",
-      "Bash(git fetch *)",
-      "Bash(git pull *)",
-      "Bash(git add *)",
-      "Bash(git commit *)",
-      "Bash(git push *)",
-      "Bash(ls *)",
-      "Bash(find . *)",
-      "Bash(grep *)",
-      "Bash(cat *)",
-      "Bash(node --version)",
-      "Bash(python --version)",
-      "Bash(python3 --version)",
-      "Bash(pip list *)",
-      "Bash(ollama list)"
+      "Bash(git diff)",
+      "Bash(git log --oneline -10)",
+      "Bash(python3 scripts/check_repo.py)",
+      "Bash(python3 scripts/sync_skills.py --check)",
+      "Bash(python3 -m unittest discover -s tests -v)"
     ]
   }
 }

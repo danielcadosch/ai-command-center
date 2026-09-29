@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "active_profile": "core",
+  "profiles": {
+    "core": [
+      "reportes-marketing",
+      "brief-creativo",
+      "copy-marketing"
+    ],
+    "marketing": [
+      "reportes-marketing",
+      "brief-creativo",
+      "copy-marketing",
+      "ab-testing-ads",
+      "audiencias-meta",
+      "calendario-contenido",
+      "email-marketing",
+      "meta-ads",
+      "x-twitter-growth"
+    ],
+    "automation": [
+      "reportes-marketing",
+      "brief-creativo",
+      "copy-marketing",
+      "github",
+      "gmail",
+      "google-calendar",
+      "google-drive",
+      "n8n",
+      "notebooklm"
+    ],
+    "engineering": [
+      "github",
+      "writing-plans",
+      "verification-before-completion",
+      "skill-creator",
+      "skill-judge",
+      "find-skills",
+      "mcp-builder",
+      "agentation",
+      "subagent-driven-development",
+      "dispatching-parallel-agents"
+    ],
+    "full": [
+      "ab-testing-ads",
+      "agentation",
+      "audiencias-meta",
+      "brief-creativo",
+      "calendario-contenido",
+      "copy-marketing",
+      "dispatching-parallel-agents",
+      "email-marketing",
+      "find-skills",
+      "github",
+      "gmail",
+      "google-calendar",
+      "google-drive",
+      "mcp-builder",
+      "meta-ads",
+      "n8n",
+      "notebooklm",
+      "reportes-marketing",
+      "skill-creator",
+      "skill-judge",
+      "subagent-driven-development",
+      "verification-before-completion",
+      "writing-plans",
+      "x-twitter-growth"
+    ]
+  }
+}
