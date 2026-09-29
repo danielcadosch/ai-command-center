@@ -10,7 +10,7 @@ Conectar GitHub a ChatGPT no demuestra que Codex ni Claude tengan esa misma auto
 
 ## Codex en la nube
 
-1. Abre la configuración de repositorios/entornos de Codex desde tu cuenta. Conecta GitHub mediante la instalación oficial y selecciona `danielcadosch/ai-ecosystem-esposa`.
+1. Abre la configuración de repositorios/entornos de Codex desde tu cuenta. Conecta GitHub mediante la instalación oficial y selecciona `danielcadosch/ai-command-center`.
 2. Limita la instalación a los repositorios que quieras usar. Este repositorio público puede leerse sin que eso demuestre permiso de escritura.
 3. Selecciona `main` como base y un entorno con Python 3.10 o posterior. Este proyecto no necesita dependencias. Si hay un campo de script de preparación, usa `python3 scripts/check_repo.py` desde la raíz del checkout. No hace falta descargar nada.
 4. Para las primeras tareas de este repositorio puede mantenerse desactivado el acceso a internet del agente. Actívalo solo cuando la tarea necesite fuentes o servicios externos y con los destinos pertinentes.
