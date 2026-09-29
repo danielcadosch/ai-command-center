@@ -1,61 +1,14 @@
-# Reportes de Marketing — Métricas y análisis de rendimiento
+---
+name: "reportes-marketing"
+description: "Analiza métricas de campañas, gasto, CPC, CPM, CPA y ROAS; úsala para informes de marketing y comparaciones de rendimiento con datos aportados o conectados."
+---
 
-## Descripción
-Consolida métricas de Meta Ads y las exporta a Google Drive como reporte.
-Permite tomar decisiones basadas en datos sin salir del chat.
+# Reportes de marketing
 
-## Cuándo usar (triggers)
-- "cómo están las campañas", "reporte de ads"
-- "cuánto gastamos", "métricas de la semana"
-- "rendimiento de los anuncios", "CPC, CPM, ROAS"
-- "genera un reporte", "resumen de marketing"
-
-## Proceso estándar
-
-### 1. Obtener métricas de Meta Ads
-```
-mcp__c24bc423__ads_insights_performance_trend({
-  adAccountId: "act_<id>",
-  datePreset: "last_7d",   // "last_7d" | "last_30d" | "this_month" | "last_month"
-  level: "campaign"        // "campaign" | "adset" | "ad"
-})
-```
-
-### 2. Detectar anomalías
-```
-mcp__c24bc423__ads_insights_anomaly_signal({
-  adAccountId: "act_<id>",
-  metric: "spend"   // "spend" | "impressions" | "clicks" | "ctr"
-})
-```
-
-### 3. Analizar y resumir
-Claude interpreta los datos y genera:
-- Resumen ejecutivo (3-5 líneas)
-- Tabla de KPIs por campaña
-- Campañas con mejor y peor rendimiento
-- Recomendaciones concretas
-
-### 4. Guardar en Drive
-```
-mcp__6ca765ee__create_file({
-  name: "Reporte-Marketing-[fecha].md",
-  content: "[reporte completo]",
-  mimeType: "text/plain"
-})
-```
-
-## KPIs clave a incluir en el reporte
-| KPI | Descripción | Benchmark referencia |
-|---|---|---|
-| CPM | Costo por 1000 impresiones | < $10 USD |
-| CPC | Costo por clic | < $1 USD |
-| CTR | % de clics sobre impresiones | > 1% |
-| CPL | Costo por lead | Depende del negocio |
-| ROAS | Retorno sobre inversión en ads | > 3x |
-| Frecuencia | Veces que vio el ad cada persona | < 3 (evitar fatiga) |
-
-## Cadencia recomendada
-- **Semanal**: KPIs principales + anomalías
-- **Mensual**: Análisis profundo + comparativa mes anterior
-- **Por campaña**: Al finalizar cada campaña puntual
+1. Define cuenta, período, moneda, zona horaria, objetivo y ventana de atribución con el contexto disponible. Pide solo datos que cambien la conclusión. Identifica fuente y fecha de extracción; distingue datos observados de supuestos.
+2. Usa archivos aportados o el conector realmente disponible. No presupongas acceso a Meta ni a Drive. Si faltan datos, entrega la estructura y las carencias concretas sin inventar resultados.
+3. Comprueba duplicados, granularidad (campaña/conjunto/anuncio), totales, períodos comparables, gasto y unidades. No sumes filas de distintos niveles que representen el mismo gasto. No sumes alcance único entre segmentos solapados.
+4. Calcula sobre totales compatibles: CTR = clics/impresiones × 100; CPC = gasto/clics; CPM = gasto/impresiones × 1000; CPA = gasto/conversiones; ROAS = ingresos atribuidos/gasto. Especifica qué tipo de clic y conversión se usa. Denominador cero o dato ausente: N/D, nunca cero inventado. No promedies ratios sin ponderarlos.
+5. Para variaciones: (actual/anterior − 1) × 100; base cero: N/D y diferencia absoluta. En tasas diferencia puntos porcentuales de cambio relativo. No mezcles monedas ni ventanas de atribución sin normalización documentada.
+6. Entrega resumen, tabla de métricas con fórmula/unidad, calidad de datos, hipótesis y acciones priorizadas. Separa correlación de causalidad. No declares ganadores estadísticos solo por diferencias descriptivas.
+7. Genera el informe en el formato solicitado; guardar en Drive requiere que el destino esté identificado y el conector exista. Analizar no autoriza cambiar presupuestos ni campañas.
