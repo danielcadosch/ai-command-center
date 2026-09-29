@@ -43,9 +43,11 @@ Fuentes: [memoria e importaciones](https://code.claude.com/docs/en/memory), [ski
 | Datos privados | Este repo es público; mantener aquí configuración reusable, no documentos de clientes |
 | Revisiones | Ramas y PRs con checks; no permitir que una instrucción externa cambie el alcance autorizado |
 
-No se han cambiado desde este repositorio instalaciones, tokens, autenticación, visibilidad ni reglas de la cuenta. La integración utilizada para preparar estos archivos no permite administrar esas superficies.
+No se han cambiado instalaciones, tokens ni visibilidad. La integración de GitHub permitió leer, pero rechazó la escritura; la publicación y la protección de la rama se completaron desde el navegador autorizado por el usuario.
 
-## Protección recomendada de main
+## Protección de main
+
+Configurada y verificada: PR obligatorio, check `validate` de GitHub Actions, rama actualizada antes de integrar y aplicación también a administradores. Los force pushes y el borrado están bloqueados. No se exige revisión de otra persona para esta cuenta individual. Si estas reglas se modifican más adelante, vuelve a comprobarlas en GitHub.
 
 En Settings → Rules → Rulesets (o la sección de protección de ramas disponible en tu cuenta), configura una regla para `main`: PR antes de merge, check `validate` de este workflow, bloquear force pushes y borrado. Hazlo después de que el workflow haya ejecutado una vez para seleccionar el check real. Comprueba la disponibilidad según plan y visibilidad.
 

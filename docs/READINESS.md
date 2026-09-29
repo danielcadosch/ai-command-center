@@ -37,10 +37,15 @@ Estos ejercicios prueban el comportamiento de las instrucciones en el entorno de
 
 Las conexiones y la detección nativa en tus sesiones de Codex/Claude requieren verificarse allí. Las comprobaciones locales no autentican esos productos.
 
-## Pendiente de configuración de cuenta
+## Publicación y protección verificadas
+
+La configuración se integró en `main` mediante el PR #4. Los archivos remotos coincidieron por hash con la versión validada. GitHub Actions pasó tanto en la rama y el PR como después de la integración.
+
+La protección de `main` exige PR, el check `validate` de GitHub Actions y una rama actualizada. También aplica a administradores; no permite force push ni borrado. No exige aprobación de otra persona, para permitir trabajar con esta cuenta individual.
+
+## Pendiente en cada producto
 
 - Selección de repositorio y entorno dentro de cada producto, según las conexiones existentes.
-- Protección de `main` mediante ajustes de GitHub.
 - Conectores operativos y plugins solo cuando exista una necesidad concreta.
 
 Consulta [CLOUD_SETUP.md](CLOUD_SETUP.md). No se registran como completadas operaciones de cuenta que esta integración no permite realizar.
