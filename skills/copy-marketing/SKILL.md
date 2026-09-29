@@ -1,50 +1,16 @@
-# Copy Marketing — Redacción de textos publicitarios
+---
+name: "copy-marketing"
+description: "Redacta y mejora copy para anuncios, landing pages, emails y redes; úsala para titulares, variantes, propuestas de valor y llamadas a la acción."
+---
 
-## Descripción
-Claude redacta copies efectivos para ads, emails, landing pages y redes sociales.
-No requiere MCP externo — es capacidad nativa de Claude.
+# Copy de marketing
 
-## Cuándo usar (triggers)
-- "escribe un copy para", "redacta un anuncio"
-- "necesito texto para el ad", "dame opciones de headline"
-- "escribe la descripción del producto", "CTA para"
-- "copy para Facebook/Instagram/email"
+Usa el contexto de producto, audiencia, canal, objetivo, tono y oferta. Si falta un detalle no esencial, señala el supuesto y avanza. Si falta el producto o la promesa central, solicita ese dato.
 
-## Estructura de un buen copy de Meta Ads
+Entrega por defecto tres variantes con ángulos distintos, cada una con titular, texto y CTA. Explica en una línea qué hipótesis prueba cada variante. Adapta longitud al formato pedido; verifica límites actuales solo si son necesarios para publicar.
 
-### Fórmula PAS (Pain → Agitation → Solution)
-```
-[Dolor del cliente]
-[Agravante: qué pasa si no lo resuelve]
-[Solución: tu producto/servicio]
-[CTA claro]
-```
+Prioriza lenguaje claro, beneficios concretos y una sola acción. PAS y AIDA son opciones, no requisitos. Conserva términos de marca y el español solicitado.
 
-### Fórmula AIDA (Attention → Interest → Desire → Action)
-```
-[Hook que para el scroll]
-[Dato o beneficio interesante]
-[Por qué lo necesitan AHORA]
-[CTA con urgencia]
-```
+Usa únicamente hechos y evidencias aportadas o comprobadas. No inventes descuentos, urgencia, escasez, testimonios, certificaciones ni garantías de rendimiento. Separa placeholders de texto publicable. Evita atribuir al lector datos sensibles en anuncios.
 
-## Proceso estándar
-1. Preguntar: objetivo (tráfico, conversión, awareness), audiencia, producto, tono
-2. Generar 3 variantes con distintos ángulos
-3. Para cada variante: headline, texto principal, CTA
-4. Indicar cuál variante recomienda Claude y por qué
-5. Ofrecer ajustes según feedback
-
-## Specs por formato
-| Formato | Headline | Texto principal | CTA |
-|---|---|---|---|
-| Facebook Feed | 40 chars | 125 chars (antes del "ver más") | 20 chars |
-| Instagram Stories | No aplica | 3-5 palabras visibles | Swipe up |
-| Google Search | 30 chars x3 | 90 chars x2 | — |
-| Email Subject | 50 chars | — | — |
-
-## Tonos frecuentes
-- **Urgencia**: "Solo hasta el domingo", "Últimos lugares"
-- **Autoridad**: datos, testimonios, certificaciones
-- **Empatía**: hablar del problema del cliente antes que del producto
-- **FOMO**: lo que pierden si no actúan
+Revisa coherencia entre titular, oferta y destino; enumera datos por confirmar. Redactar variantes no incluye enviarlas, activar campañas ni publicarlas.
