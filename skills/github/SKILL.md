@@ -1,46 +1,14 @@
-# GitHub — Operaciones sobre el repo
+---
+name: "github"
+description: "Opera repositorios, ramas, commits y pull requests cuando el usuario pide trabajar en GitHub; complementa las capacidades nativas del conector disponible."
+---
 
-## Contexto
-Disponible solo en sesiones remotas. Restringido a `danielcadosch/ai-ecosystem-esposa`.
+# Trabajo en GitHub
 
-## Regla crítica
-Siempre hacer ToolSearch antes de llamar cualquier tool GitHub:
-```
-ToolSearch({ query: "select:mcp__github__push_files,mcp__github__get_file_contents" })
-```
+Identifica usuario, repositorio, rama base y permisos mediante el conector o CLI ya autorizado. Descubre herramientas y esquemas reales cuando sea necesario. Un listado vacío no prueba que la cuenta no tenga repositorios; revisa filtros, afiliación y permisos sin explorar cuentas ajenas.
 
-## Operaciones frecuentes
+Lee instrucciones del proyecto, estado de trabajo y archivos afectados. Conserva cambios ajenos. Agrupa un cambio coherente en una rama y PR con propósito, comportamiento y validación. No uses ramas históricas fijas ni empujes por defecto a main.
 
-### Leer un archivo del repo
-```
-mcp__github__get_file_contents({ owner: "danielcadosch", repo: "ai-ecosystem-esposa", path: "CLAUDE.md" })
-```
+Verifica el SHA antes de actualizar referencias o fusionar. Si cambió la base, reconcilia sin force push. No declares éxito por solo crear un commit: comprueba la referencia remota y el estado de los checks.
 
-### Subir múltiples archivos en un commit (preferido)
-```
-mcp__github__push_files({
-  owner: "danielcadosch",
-  repo: "ai-ecosystem-esposa",
-  branch: "main",
-  message: "descripción del cambio",
-  files: [
-    { path: "ruta/archivo.md", content: "contenido" }
-  ]
-})
-```
-
-### Ver PRs abiertos
-```
-mcp__github__list_pull_requests({ owner: "danielcadosch", repo: "ai-ecosystem-esposa", state: "open" })
-```
-
-### Escuchar eventos de un PR (CI, reviews)
-```
-mcp__github__subscribe_pr_activity({ owner: "danielcadosch", repo: "ai-ecosystem-esposa", pullNumber: 1 })
-```
-
-## Buenas prácticas
-- Usar `push_files` para múltiples archivos — un solo commit es más limpio
-- NUNCA hacer push a main con claves reales en los archivos
-- Antes de force push o delete: confirmar con Daniel
-- Branch de desarrollo: `claude/create-robust-repo-84aTU`
+La autorización del usuario define si se prepara, publica o integra el cambio. No amplíes permisos, borres repositorios, cambies visibilidad ni reescribas historia como paso incidental. No incluyas secretos en archivos, logs o PRs.
